@@ -24,7 +24,7 @@ export const Results = ({
     return title
       .split("_")
       .map((word, index) =>
-        index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word,
+        index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word
       )
       .join(" ");
   };
@@ -92,7 +92,7 @@ export const Results = ({
                       >
                         {formatCellValue(
                           column,
-                          company[column as keyof Unicorn],
+                          company[column as keyof Unicorn]
                         )}
                       </TableCell>
                     ))}

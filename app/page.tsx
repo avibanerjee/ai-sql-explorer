@@ -10,6 +10,19 @@ import {
 import { Config, Result } from "@/lib/types";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
+<<<<<<< Updated upstream
+=======
+
+import { Config, Result } from "@/lib/types";
+import {
+  runGeneratedSQLQuery,
+  generateQuery,
+  generateChartConfig,
+} from "./actions";
+
+import { Header } from "@/components/header";
+import { QueryViewer } from "@/components/query-viewer";
+>>>>>>> Stashed changes
 import { ProjectInfo } from "@/components/project-info";
 import { Results } from "@/components/results";
 import { SuggestedQueries } from "@/components/suggested-queries";
@@ -30,7 +43,11 @@ export default function Page() {
   const handleSubmit = async (suggestion?: string) => {
     const question = suggestion ?? inputValue;
     if (inputValue.length === 0 && !suggestion) return;
+<<<<<<< Updated upstream
     clearExistingData();
+=======
+
+>>>>>>> Stashed changes
     if (question.trim()) {
       setSubmitted(true);
     }
@@ -39,6 +56,10 @@ export default function Page() {
     setActiveQuery("");
     try {
       const query = await generateQuery(question);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
       if (query === undefined) {
         toast.error("An error occurred. Please try again.");
         setLoading(false);
@@ -51,8 +72,14 @@ export default function Page() {
       setResults(companies);
       setColumns(columns);
       setLoading(false);
+<<<<<<< Updated upstream
       const generation = await generateChartConfig(companies, question);
       setChartConfig(generation.config);
+=======
+
+      const chartConfig = await generateChartConfig(companies, question);
+      setChartConfig(chartConfig.config);
+>>>>>>> Stashed changes
     } catch (e) {
       toast.error("An error occurred. Please try again.");
       setLoading(false);
