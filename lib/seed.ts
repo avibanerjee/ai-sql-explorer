@@ -20,9 +20,20 @@ function parseDate(dateString: string): string {
   try {
     const parts = dateString.split("/");
     if (parts.length === 3) {
-      const day = parts[0].padStart(2, "0");
-      const month = parts[1].padStart(2, "0");
-      const year = parts[2];
+      const month = parts[0].padStart(2, "0");
+      const day = parts[1].padStart(2, "0");
+      let year = parts[2];
+
+      // Handle two-digit years
+      if (year.length === 2) {
+        // Assuming years 00-49 are 2000s, 50-99 are 1900s
+        const yearNum = parseInt(year);
+        if (yearNum >= 0 && yearNum <= 49) {
+          year = `20${year}`;
+        } else {
+          year = `19${year}`;
+        }
+      }
 
       // Validate the date components
       const date = new Date(`${year}-${month}-${day}`);
