@@ -18,14 +18,13 @@ export const ProjectInfo = () => {
             AI SDK
           </Link>{" "}
           to allow you to query a PostgreSQL database with natural language. The
-          dataset is CB Insights&apos; list of all unicorn companies. Learn more
-          at{" "}
+          dataset contains insurance policyholder information. Learn more at{" "}
           <Link
-            href="https://www.cbinsights.com/research-unicorn-companies"
+            href="https://www.insurance.com"
             target="_blank"
             className="text-primary hover:text-primary/90 underline"
           >
-            CB Insights
+            Insurance.com
           </Link>
           .
           <div className="mt-4 sm:hidden">

@@ -1,14 +1,14 @@
 import { z } from "zod";
 
-export type Unicorn = {
+export type Policyholder = {
   id: number;
-  company: string;
-  valuation: number;
-  date_joined: Date | null;
-  country: string;
+  name: string;
+  policy_value: number;
+  policy_start_date: Date | null;
+  state: string;
   city: string;
-  industry: string;
-  select_investors: string;
+  policy_type: string;
+  insurance_provider: string;
 };
 
 export type Result = Record<string, string | number>;

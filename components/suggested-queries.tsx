@@ -66,11 +66,11 @@ export const SuggestedQueries = ({
       exit={{ opacity: 0 }}
       className="h-full overflow-y-auto"
     >
-      <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-4">
+      {/* <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-4">
         Try these queries:
-      </h2>
+      </h2> */}
       <div className="flex flex-wrap gap-2">
-        {suggestionQueries.map((suggestion, index) => (
+        {/* {suggestionQueries.map((suggestion, index) => (
           <Button
             key={index}
             className={index > 5 ? "hidden sm:inline-block" : ""}
@@ -81,7 +81,7 @@ export const SuggestedQueries = ({
             <span className="sm:hidden">{suggestion.mobile}</span>
             <span className="hidden sm:inline">{suggestion.desktop}</span>
           </Button>
-        ))}
+        ))} */}
       </div>
     </motion.div>
   );
